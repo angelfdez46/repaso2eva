@@ -24,14 +24,14 @@ class MultimediaPage extends StatelessWidget {
       leading: const Icon(Icons.image),
       title: const Text('Imágenes'),
       onTap: () {
-        context.go('/images'); // 👈 GoRouter
+        context.pushNamed('imagenes'); // 👈 GoRouter
       },
     ),
           ListTile(
             leading: const Icon(Icons.music_note),
             title: const Text('Audio'),
             onTap: () {
-              context.go('/audio');
+              context.push('/audio');
             },
           ),
           ListTile(
@@ -56,6 +56,27 @@ class MultimediaPage extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.video_file),
+            title: const Text('videoURL'),
+            onTap: () {
+              context.push('/videourl');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.picture_in_picture_alt),
+            title: const Text('image_camera'),
+            onTap: () {
+              context.push('/image_camera');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.link),
+            title: const Text('deep_linking'),
+            onTap: () {
+            context.push('/deep_linking');
+    },
+    )
         ],
       ),
     );

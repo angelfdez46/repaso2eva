@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../pages/multimedia/video_page.dart';
+import '../pages/multimedia/youtube_page.dart';
+
 class TabsPage extends StatelessWidget {
   const TabsPage({super.key});
 
@@ -12,17 +15,26 @@ class TabsPage extends StatelessWidget {
           title: const Text('Tabs'),
           bottom: const TabBar(
             tabs: [
-              Tab(text: 'Uno'),
-              Tab(text: 'Dos'),
-              Tab(text: 'Tres'),
+              Tab(text: 'imagen'),
+              Tab(text: 'video local'),
+              Tab(text: 'video YT'),
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [
-            Center(child: Text('Tab 1')),
-            Center(child: Text('Tab 2')),
-            Center(child: Text('Tab 3')),
+        body: TabBarView(
+          children: const [
+            // TAB 1
+            Center(
+              child: Image(
+                image: AssetImage('assets/images/svg/basket.jpg'),
+              ),
+            ),
+
+            // TAB 2
+            VideoPage(),
+
+            // TAB 3
+            VideoYoutubePage(),
           ],
         ),
       ),

@@ -45,9 +45,8 @@ class DrawerPage extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.home),
                 title: const Text('Home'),
-                onTap: () {
-                  Navigator.pop(context);
-                  context.go('/');
+                  onTap: () {
+                    context.go('/');
                 },
               ),
 
@@ -108,22 +107,28 @@ class DrawerPage extends StatelessWidget {
                     context,
                     MaterialPageRoute(builder: (_) => const TabsPage()),
                   );
-
-        }
-
+                }
               ),
               ListTile(
               leading: const Icon(Icons.tab),
-        title : const Text('Navigation bar'),
-        onTap: () {
-        Navigator.pop(context);
-        Navigator.push(
-        context,
-        MaterialPageRoute(builder: (_) => NavigationBarPage()),
-        );
-
-        }
-              )],
+                  title : const Text('Navigation bar'),
+                  onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => NavigationBarPage()),
+                   );
+                }
+              ),
+              ListTile(
+                  leading: const Icon(Icons.home),
+                   title: const Text('deep_linking'),
+                    onTap: () {
+                    Navigator.pop(context);
+                    context.go('/deep_linking');
+                 },
+              )
+            ],
           ),
         );
       },

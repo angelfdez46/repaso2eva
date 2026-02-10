@@ -14,7 +14,7 @@ class _VideoPageState extends State<VideoPage> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('assets/video/video1.mp4')
+    _controller = VideoPlayerController.asset('assets/videos/steamboat_willie.mp4')
       ..initialize().then((_) {
         setState(() {});
       });

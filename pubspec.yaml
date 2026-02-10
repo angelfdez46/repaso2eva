@@ -79,7 +79,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/svg/
-    - assets/videos/
+    - assets/videos/steamboat_willie.mp4
 
   # To add assets to your application, add an assets section, like this:
   # assets:
